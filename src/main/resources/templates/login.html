@@ -7,7 +7,25 @@
 <body>
 <h1>Wellcome to my website - Login now !!!</h1>
 
-<br>
+<p>
+    <span th:if="${error}" th:text="${error}" style="color: deeppink; font-weight: bold" ></span>
+</p>
+
+<form th:action="@{/auth}" method="post">
+    <p>
+        <label for="email">Email:</label>
+        <input id="email" name="email" value="email" placeholder="Email address" required>
+    </p>
+
+    <p>
+        <label for="password">Password:</label>
+        <input id="password" name="password" value="password" required>
+    </p>
+
+    <p>
+        <button type="submit" value="Login" style="color: deeppink"></button>
+    </p>
+</form>
 
 <h4>&#169; Baviskop .aka Hau Thanh Long</h4>
 

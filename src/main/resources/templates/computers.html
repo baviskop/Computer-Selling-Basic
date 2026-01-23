@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+    <h1>The list of computers</h1>
+
+    <h3 th:text="'Hello' + ${session.loggedIn.getEmail()}"></h3>
+
+    <p>
+        <a th:href="@{/logout}">Logout</a>
+    </p>
+    <h4>&#169; Baviskop .aka Hau Thanh Long</h4>
 
 </body>
 </html>

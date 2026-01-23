@@ -15,4 +15,14 @@ public class UserServiceImpl implements UserService {
     public void createUser(User u) {
         userRepo.save(u);
     }
+
+    @Override
+    public User authenticate(String email) {
+        return userRepo.findByEmail(email);
+    }
+
+    @Override
+    public User authenticate(String email, String password) {
+        return userRepo.findByEmailAndPassword(email, password);
+    }
 }
