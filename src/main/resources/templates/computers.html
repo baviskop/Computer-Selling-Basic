@@ -12,6 +12,39 @@
     <p>
         <a th:href="@{/logout}">Logout</a>
     </p>
+
+
+    <p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Manufacturer</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="x: ${comps}">
+                    <td th:text="${x.id}"></td>
+                    <td th:text="${x.model}"></td>
+                    <td th:text="${x.type}"></td>
+                    <td th:text="${x.year}"></td>
+                    <td th:text="${x.price}"></td>
+                    <td th:text="${x.manufacturer.name}"></td>
+                    <td>
+                        <a th:href="@{'/computers/edit' + ${x.id}}">Edit</a> |
+                        <a th:href="@{'/computers/delete' + ${x.id}}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+
+
     <h4>&#169; Baviskop .aka Hau Thanh Long</h4>
 
 </body>

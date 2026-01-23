@@ -6,6 +6,8 @@ import com.long1dep.comp_sell.service.ComputerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ComputerServiceImpl implements ComputerService {
     @Autowired
@@ -13,5 +15,10 @@ public class ComputerServiceImpl implements ComputerService {
     @Override
     public void createComputer(Computer c) {
         compRepo.save(c);
+    }
+
+    @Override
+    public List<Computer> showAllComputers() {
+        return compRepo.findAll();
     }
 }
