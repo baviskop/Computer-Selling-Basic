@@ -13,7 +13,7 @@ public class ManufacturerServiceImpl implements ManufacturerService {
     @Autowired
     private ManufacturerRepository manuRepo;
     @Override
-    public void createManufacturer(Manufacturer m) {
+    public void saveManufacturer(Manufacturer m) {
         manuRepo.save(m);
     }
 

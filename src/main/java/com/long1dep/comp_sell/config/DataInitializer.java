@@ -34,17 +34,17 @@ public class DataInitializer implements CommandLineRunner {
         Computer comp3 = new Computer("Pavilion 15", "Consumer Laptop", 2022, 699.99, manu3);
         Computer comp4 = new Computer("Inspiron 14", "Budget Laptop", 2023, 549.99, manu1);
 
-        userService.createUser(u1);
-        userService.createUser(u2);
-        userService.createUser(u3);
+        userService.saveUser(u1);
+        userService.saveUser(u2);
+        userService.saveUser(u3);
 
-        manufacturerService.createManufacturer(manu1);
-        manufacturerService.createManufacturer(manu2);
-        manufacturerService.createManufacturer(manu3);
+        manufacturerService.saveManufacturer(manu1);
+        manufacturerService.saveManufacturer(manu2);
+        manufacturerService.saveManufacturer(manu3);
 
-        compService.createComputer(comp1);
-        compService.createComputer(comp2);
-        compService.createComputer(comp3);
-        compService.createComputer(comp4);
+        compService.saveComputer(comp1);
+        compService.saveComputer(comp2);
+        compService.saveComputer(comp3);
+        compService.saveComputer(comp4);
     }
 }

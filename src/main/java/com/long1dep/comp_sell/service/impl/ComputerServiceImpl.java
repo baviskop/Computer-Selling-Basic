@@ -13,7 +13,7 @@ public class ComputerServiceImpl implements ComputerService {
     @Autowired
     private ComputerRepository compRepo;
     @Override
-    public void createComputer(Computer c) {
+    public void saveComputer(Computer c) {
         compRepo.save(c);
     }
 
@@ -25,5 +25,15 @@ public class ComputerServiceImpl implements ComputerService {
     @Override
     public Computer getComputerById(long id) {
         return compRepo.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deleteComputerById(long id) {
+        compRepo.deleteById(id);
+    }
+
+    @Override
+    public void delelteComputer(Computer c) {
+        compRepo.delete(c);
     }
 }

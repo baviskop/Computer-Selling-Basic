@@ -7,12 +7,14 @@
 <body>
     <h1>The list of computers</h1>
 
-    <h3 th:text="'Hello' + ${session.loggedIn.getEmail()}"></h3>
+    <div style="position: absolute; top: 10px; right: 10px; color: blueviolet; font-weight: lighter">
+        <span th:text="'Hello' + ${session.loggedIn.getEmail()}"></span> |
+        <a th:href="@{/logout}">Logout</a>
+    </div>
 
     <p>
-        <a th:href="@{/logout}">Logout</a>
+        <a th:href="@{computers/create}">New</a>
     </p>
-
 
     <p>
         <table border="3">

@@ -8,7 +8,7 @@
     <h1>Computer Detail Page</h1>
 
     <form th:action="@{'/computers/save'}" method="post" th:object="${ObjX}">
-        <p>
+        <p th:hidden="true">
             <label for="id">Id</label>
             <input id="id" type="text" th:field="*{id}">
         </p>

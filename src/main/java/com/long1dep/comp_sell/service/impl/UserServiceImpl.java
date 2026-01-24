@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepo;
 
     @Override
-    public void createUser(User u) {
+    public void saveUser(User u) {
         userRepo.save(u);
     }
 

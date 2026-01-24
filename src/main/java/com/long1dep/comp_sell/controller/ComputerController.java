@@ -3,14 +3,13 @@ package com.long1dep.comp_sell.controller;
 import com.long1dep.comp_sell.entity.Computer;
 import com.long1dep.comp_sell.service.ComputerService;
 import com.long1dep.comp_sell.service.ManufacturerService;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/computers")
@@ -22,15 +21,32 @@ public class ComputerController {
     private ManufacturerService manuService;
 
     @GetMapping
-    public String showAllComputers(Model model) {
+    public String showAllComputers(Model model, HttpSession session) {
+        if (session.getAttribute("loggedIn") == null) {
+            return "redirect:/login";
+        }
+
         model.addAttribute("comps", compService.showAllComputers());
 
         return "computers";
     }
 
     @GetMapping("/edit/{id}")
-    public String editComputer(@PathVariable("id") long id, Model model) {
+    public String editComputer(@PathVariable("id") long id, Model model, HttpSession session) {
+        if (session.getAttribute("loggedIn") == null) {
+            return "redirect:/login";
+        }
+
         model.addAttribute("ObjX", compService.getComputerById(id));
+        model.addAttribute("manus", manuService.getAllManufacturer());
+        return "computer-form";
+    }
+    @GetMapping("/create")
+    public String createComputer(Model model,  HttpSession session) {
+        if (session.getAttribute("loggedIn") == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute("ObjX", new Computer());
         model.addAttribute("manus", manuService.getAllManufacturer());
         return "computer-form";
     }
@@ -44,7 +60,16 @@ public class ComputerController {
             return "computer-form";
         }
 
-        compService.createComputer(x);
+        compService.saveComputer(x);
         return  "redirect:/computers";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteComputer(@PathVariable("id") long id, Model model, HttpSession session) {
+        if(session.getAttribute("loggedIn") == null) {
+            return "redirect:/login";
+        }
+        compService.deleteComputerById(id);
+        return "redirect:/computers";
     }
 }
