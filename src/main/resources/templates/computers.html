@@ -13,6 +13,10 @@
     </div>
 
     <p>
+        <span th:if="${invalidRole}" th:text="${invalidRole}" style="color: deeppink; font-weight: bold" ></span>
+    </p>
+
+    <p th:if="${session.loggedIn.getRole() == 'Admin'}">
         <a th:href="@{computers/create}">New</a>
     </p>
 
@@ -26,7 +30,8 @@
                     <th>Year</th>
                     <th>Price</th>
                     <th>Manufacturer</th>
-                    <th>Action</th>
+                    <th th:if="${session.loggedIn.getRole() == 'Admin'}">
+                        Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,7 +42,7 @@
                     <td th:text="${x.year}"></td>
                     <td th:text="${x.price}"></td>
                     <td th:text="${x.manufacturer.name}"></td>
-                    <td>
+                    <td th:if="${session.loggedIn.getRole() == 'Admin'}">
                         <a th:href="@{'/computers/edit/' + ${x.id}}">Edit</a> |
                         <a th:href="@{'/computers/delete/' + ${x.id}}" onclick="return confirm('Are u sure?')">Delete</a>
                     </td>
