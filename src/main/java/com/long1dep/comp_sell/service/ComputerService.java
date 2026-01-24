@@ -8,4 +8,6 @@ public interface ComputerService {
     public void createComputer(Computer c);
 
     public List<Computer> showAllComputers();
+
+    public Computer getComputerById(long id);
 }

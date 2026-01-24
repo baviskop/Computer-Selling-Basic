@@ -15,7 +15,7 @@
 
 
     <p>
-        <table border="1">
+        <table border="3">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -36,8 +36,8 @@
                     <td th:text="${x.price}"></td>
                     <td th:text="${x.manufacturer.name}"></td>
                     <td>
-                        <a th:href="@{'/computers/edit' + ${x.id}}">Edit</a> |
-                        <a th:href="@{'/computers/delete' + ${x.id}}">Delete</a>
+                        <a th:href="@{'/computers/edit/' + ${x.id}}">Edit</a> |
+                        <a th:href="@{'/computers/delete/' + ${x.id}}">Delete</a>
                     </td>
                 </tr>
             </tbody>

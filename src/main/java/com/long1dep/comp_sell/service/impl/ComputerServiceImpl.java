@@ -21,4 +21,9 @@ public class ComputerServiceImpl implements ComputerService {
     public List<Computer> showAllComputers() {
         return compRepo.findAll();
     }
+
+    @Override
+    public Computer getComputerById(long id) {
+        return compRepo.findById(id).orElse(null);
+    }
 }

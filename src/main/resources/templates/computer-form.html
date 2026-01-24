@@ -2,9 +2,38 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Computer Detail Page</title>
 </head>
 <body>
+    <h1>Computer Detail Page</h1>
+
+    <form th:action="@{'/computers/save'}" method="post" th:object="${ObjX}">
+        <p>
+            <label for="id">Id</label>
+            <input id="id" type="text" th:field="*{id}">
+        </p>
+        <p>
+            <label for="model">Model</label>
+            <input id="model" type="text" th:field="*{model}">
+        </p>
+        <p>
+            <label for="type">Type</label>
+            <input id="type" type="text" th:field="*{type}">
+        </p>
+        <p>
+            <label for="year">Year</label>
+            <input id="year" type="text" th:field="*{year}">
+        </p>
+        <p>
+            <label for="price">Price</label>
+            <input id="price" type="text" th:field="*{price}">
+        </p>
+        <p>
+            <button type="submit">Save</button>
+        </p>
+    </form>
+
+    <h4>&#169; Baviskop .aka Hau Thanh Long</h4>
 
 </body>
 </html>
