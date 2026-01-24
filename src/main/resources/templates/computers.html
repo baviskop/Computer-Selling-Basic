@@ -37,7 +37,7 @@
                     <td th:text="${x.manufacturer.name}"></td>
                     <td>
                         <a th:href="@{'/computers/edit/' + ${x.id}}">Edit</a> |
-                        <a th:href="@{'/computers/delete/' + ${x.id}}">Delete</a>
+                        <a th:href="@{'/computers/delete/' + ${x.id}}" onclick="return confirm('Are u sure?')">Delete</a>
                     </td>
                 </tr>
             </tbody>

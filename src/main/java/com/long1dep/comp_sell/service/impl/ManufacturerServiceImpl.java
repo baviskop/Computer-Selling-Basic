@@ -6,6 +6,8 @@ import com.long1dep.comp_sell.service.ManufacturerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ManufacturerServiceImpl implements ManufacturerService {
     @Autowired
@@ -13,5 +15,10 @@ public class ManufacturerServiceImpl implements ManufacturerService {
     @Override
     public void createManufacturer(Manufacturer m) {
         manuRepo.save(m);
+    }
+
+    @Override
+    public List<Manufacturer> getAllManufacturer() {
+        return manuRepo.findAll();
     }
 }

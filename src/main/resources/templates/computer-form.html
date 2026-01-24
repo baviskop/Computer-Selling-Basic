@@ -15,18 +15,31 @@
         <p>
             <label for="model">Model</label>
             <input id="model" type="text" th:field="*{model}">
+            <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}" style="color: deeppink; font-weight: bold"></span>
         </p>
         <p>
             <label for="type">Type</label>
             <input id="type" type="text" th:field="*{type}">
+            <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}" style="color: deeppink; font-weight: bold"></span>
         </p>
         <p>
             <label for="year">Year</label>
             <input id="year" type="text" th:field="*{year}">
+            <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}" style="color: deeppink; font-weight: bold"></span>
         </p>
         <p>
             <label for="price">Price</label>
             <input id="price" type="text" th:field="*{price}">
+            <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" style="color: deeppink; font-weight: bold"></span>
+        </p>
+        <p>
+            <label for="manu">Manufacturer</label>
+            <select id="manu" th:field="*{manufacturer}">
+                <option th:each="x : ${manus}"
+                    th:value="${x.id}"
+                        th:text="${x.name}"
+                ></option>
+            </select>
         </p>
         <p>
             <button type="submit">Save</button>
