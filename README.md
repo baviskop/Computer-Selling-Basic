@@ -24,7 +24,7 @@ cd computer_selling
 ## Cách sử dụng
 
 ### Login Page
-![Login Image](upload/Screenshot%202026-01-24%20231223.png)
+![Login Image](https://github.com/user-attachments/assets/d577aede-0f9a-4581-94bd-49fb763548e4)
 
 ### Computers Page For Admin
 ![Computers Page Image](upload/Screenshot%202026-01-24%20231245.png)
