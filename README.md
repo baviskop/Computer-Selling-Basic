@@ -27,19 +27,19 @@ cd computer_selling
 ![Login Image](https://github.com/user-attachments/assets/d577aede-0f9a-4581-94bd-49fb763548e4)
 
 ### Computers Page For Admin
-![Computers Page Image](upload/Screenshot%202026-01-24%20231245.png)
+![Computers Page Image](https://github.com/user-attachments/assets/b282ea32-21b5-4e32-9571-f3505e63654f)
 
 ### Computers Page For Staff
-![Computers Page Image For Staff](upload/Screenshot%202026-01-24%20231453.png)
+![Computers Page Image For Staff](https://github.com/user-attachments/assets/cbf74925-a30b-445e-9022-83e85203db60)
 
 ### Add New Computer With Validation
-![Add Validate Page](upload/Screenshot%202026-01-24%20231402.png)
+![Add Validate Page](https://github.com/user-attachments/assets/68a0a09e-e59c-4851-a4dc-5f65ecec2d77)
 
 ### Edit Computers
-![Edit Computer](upload/Screenshot%202026-01-24%20231319.png)
+![Edit Computer](https://github.com/user-attachments/assets/c51342c4-3be9-4a96-bebf-83a2a20dbdd5)
 
 ### Delete Computers
-![Delete Computer](upload/Screenshot%202026-01-24%20231329.png)
+![Delete Computer](https://github.com/user-attachments/assets/e3fb39e7-d24a-4c2d-ab79-e71f92c523c1)
 
 ## Liên hệ
 (https://www.linkedin.com/in/thanh-long-6497223a7)
