@@ -12,9 +12,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class AuthController {
-
-    @Autowired
-    private UserService userService;
+    //    @Autowired
+    private final UserService userService;
+    public AuthController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping({"/", "/login", "/baviskop"})
     public String login() {

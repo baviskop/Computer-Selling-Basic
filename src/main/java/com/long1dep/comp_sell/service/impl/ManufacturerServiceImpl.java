@@ -10,8 +10,13 @@ import java.util.List;
 
 @Service
 public class ManufacturerServiceImpl implements ManufacturerService {
-    @Autowired
-    private ManufacturerRepository manuRepo;
+//    @Autowired
+    private final ManufacturerRepository manuRepo;
+
+    public ManufacturerServiceImpl(ManufacturerRepository manuRepo) {
+        this.manuRepo = manuRepo;
+    }
+
     @Override
     public void saveManufacturer(Manufacturer m) {
         manuRepo.save(m);

@@ -10,8 +10,13 @@ import java.util.List;
 
 @Service
 public class ComputerServiceImpl implements ComputerService {
-    @Autowired
-    private ComputerRepository compRepo;
+//    @Autowired
+    private final ComputerRepository compRepo;
+
+    public ComputerServiceImpl(ComputerRepository compRepo) {
+        this.compRepo = compRepo;
+    }
+
     @Override
     public void saveComputer(Computer c) {
         compRepo.save(c);

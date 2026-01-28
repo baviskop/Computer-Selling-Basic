@@ -16,11 +16,16 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping("/computers")
 public class ComputerController {
-    @Autowired
-    private ComputerService compService;
+//    @Autowired
+    private final ComputerService compService;
 
-    @Autowired
-    private ManufacturerService manuService;
+    public ComputerController(ComputerService compService, ManufacturerService manuService) {
+        this.compService = compService;
+        this.manuService = manuService;
+    }
+
+    //    @Autowired
+    private final ManufacturerService manuService;
 
     @GetMapping
     public String showAllComputers(Model model, HttpSession session) {

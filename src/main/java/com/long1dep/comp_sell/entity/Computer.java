@@ -41,14 +41,6 @@ public class Computer {
     @JoinColumn(name = "manufacturer_id")
     private Manufacturer manufacturer;
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
     public Computer(String model, String type, int year, Double price, Manufacturer manufacturer) {
         this.model = model;
         this.type = type;

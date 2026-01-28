@@ -12,12 +12,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private ComputerService compService;
-    @Autowired
-    private ManufacturerService manufacturerService;
+//    @Autowired
+//    private UserService userService;
+//    @Autowired
+//    private ComputerService compService;
+//    @Autowired
+//    private ManufacturerService manufacturerService;
+    private final UserService userService;
+    private final ComputerService compService;
+    private final ManufacturerService manufacturerService;
+
+    public DataInitializer(UserService userService, ComputerService compService, ManufacturerService manufacturerService) {
+        this.userService = userService;
+        this.compService = compService;
+        this.manufacturerService = manufacturerService;
+    }
 
     @Override
     public void run(String... args) throws Exception {
