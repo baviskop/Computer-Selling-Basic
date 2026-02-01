@@ -13,5 +13,5 @@ public interface ComputerService {
 
     public void deleteComputerById(long id);
 
-    public void delelteComputer(Computer c);
+    public void deleteComputer(Computer c);
 }

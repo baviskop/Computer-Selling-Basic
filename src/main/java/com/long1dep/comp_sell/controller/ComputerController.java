@@ -6,7 +6,6 @@ import com.long1dep.comp_sell.service.ComputerService;
 import com.long1dep.comp_sell.service.ManufacturerService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

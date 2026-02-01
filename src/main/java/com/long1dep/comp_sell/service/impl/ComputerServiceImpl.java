@@ -38,7 +38,7 @@ public class ComputerServiceImpl implements ComputerService {
     }
 
     @Override
-    public void delelteComputer(Computer c) {
+    public void deleteComputer(Computer c) {
         compRepo.delete(c);
     }
 }
