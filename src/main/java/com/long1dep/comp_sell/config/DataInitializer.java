@@ -6,7 +6,6 @@ import com.long1dep.comp_sell.entity.User;
 import com.long1dep.comp_sell.service.ComputerService;
 import com.long1dep.comp_sell.service.ManufacturerService;
 import com.long1dep.comp_sell.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
