@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: computer_selling
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=ComputerSellingDB;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: sa03020307
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
