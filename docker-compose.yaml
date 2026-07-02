@@ -22,7 +22,7 @@ services:
       - app_network
 
   computer-selling:
-    image: ${DOCKER_USERNAME}/computer-selling:${IMAGE_TAG}
+    image: baviskop/computer-selling:${IMAGE_TAG}
     container_name: computer-selling
     ports:
       - "8080:8080"
